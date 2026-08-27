@@ -1,0 +1,790 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #38232a;
+  background: #fffdfb;
+}
+
+/* TOP OFFER MARQUEE */
+.top-offer {
+  padding: 11px 15px;
+  background: linear-gradient(90deg, #781028, #ab1f40, #781028);
+  color: #fff9e6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* HEADER & PROMINENT LOGO */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid #f6e6d8;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.navbar {
+  width: 92%;
+  max-width: 1300px;
+  min-height: 95px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+.logo-yogita {
+  font-family: "Great Vibes", cursive;
+  font-size: 54px;
+  line-height: 0.85;
+  color: #8c1735;
+  text-shadow: 1px 1px 2px rgba(140, 23, 53, 0.15);
+}
+
+.logo-store {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #b87b24;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #48252d;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #a51d3d;
+}
+
+.nav-links a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #a51d3d;
+  border-radius: 2px;
+}
+
+.menu-btn {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #8c1735;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 650px;
+  padding: 70px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: radial-gradient(circle at 10% 20%, #ffeec9 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, #ffdbe2 0%, transparent 45%),
+              #fff8f3;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  filter: blur(90px);
+  z-index: 1;
+  opacity: 0.55;
+}
+
+.glow-1 { top: -60px; left: -60px; background: #ffe099; }
+.glow-2 { bottom: -60px; right: 8%; background: #ffccd5; }
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.season-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  border-radius: 25px;
+  background: #fff;
+  border: 1px solid #f2cf85;
+  color: #8c1e38;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(184, 123, 36, 0.15);
+  margin-bottom: 15px;
+}
+
+.hero-brand-tag {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #b87b24;
+  margin-bottom: 5px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: 1.05;
+  color: #63152a;
+}
+
+.hero h1 span {
+  font-family: "Great Vibes", cursive;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #b87b24;
+  display: block;
+}
+
+.hero-text {
+  margin-top: 15px;
+  color: #684f54;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 5% DISCOUNT RIBBON */
+.hero-discount-ribbon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: white;
+  border-radius: 18px;
+  border: 2px dashed #a51d3d;
+  width: fit-content;
+  box-shadow: 0 8px 25px rgba(165, 29, 61, 0.08);
+}
+
+.discount-badge-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #a51d3d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.discount-badge-circle strong {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.discount-badge-circle small {
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.discount-ribbon-text h4 {
+  font-size: 16px;
+  color: #8c1735;
+  font-weight: 800;
+}
+
+.discount-ribbon-text p {
+  font-size: 12px;
+  color: #70585d;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #a51d3d;
+  color: white;
+  box-shadow: 0 8px 20px rgba(165, 29, 61, 0.25);
+}
+
+.secondary-btn {
+  background: white;
+  border: 2px solid #a51d3d;
+  color: #a51d3d;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* HERO SHOWCASE CARD */
+.hero-card-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-card {
+  width: 330px;
+  background: white;
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 20px 45px rgba(70, 20, 30, 0.12);
+  border: 1px solid #fae8d8;
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-6px);
+}
+
+.badge-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #a51d3d;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 14px;
+  letter-spacing: 1px;
+}
+
+.hero-image-box {
+  width: 100%;
+  height: 250px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f7ede6;
+  margin-top: 18px;
+}
+
+.hero-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-card-info {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.hero-card-info small {
+  color: #b87b24;
+  font-weight: 800;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.hero-card-info h3 {
+  font-size: 18px;
+  color: #591626;
+  margin: 5px 0;
+}
+
+.hero-card-info p {
+  color: #79666a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* FEATURES BAR */
+.features-bar {
+  background: white;
+  border-top: 1px solid #f5e4db;
+  border-bottom: 1px solid #f5e4db;
+  padding: 28px 8%;
+}
+
+.features-grid {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-icon {
+  font-size: 32px;
+}
+
+.feature-item h4 {
+  font-size: 15px;
+  color: #401d24;
+}
+
+.feature-item p {
+  font-size: 12px;
+  color: #856f74;
+}
+
+/* QUICK CATEGORIES */
+.quick-categories {
+  max-width: 1250px;
+  margin: 60px auto 0;
+  padding: 0 8%;
+  text-align: center;
+}
+
+.section-tagline {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #b87b24;
+  margin-bottom: 25px;
+}
+
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.quick-card {
+  padding: 26px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid #fae8d8;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(90, 40, 50, 0.05);
+  transition: 0.3s;
+}
+
+.quick-card:hover {
+  transform: translateY(-6px);
+  border-color: #e5b980;
+}
+
+.card-icon-bg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff3e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.quick-card strong {
+  color: #48252d;
+  font-size: 16px;
+}
+
+.quick-card small {
+  margin-top: 4px;
+  color: #8c7378;
+  font-size: 12px;
+}
+
+/* COLLECTION SECTIONS */
+.collection-section {
+  padding: 90px 8%;
+}
+
+.rakhi-section { background: #fffcf7; }
+.cosmetics-section { background: #fff6f8; }
+.chooda-section { background: #fffaf4; }
+.gifts-section { background: #fdfaff; }
+
+.section-heading {
+  max-width: 750px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.festival-title {
+  color: #a51d3d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin-top: 10px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(34px, 4.5vw, 50px);
+  color: #63152a;
+}
+
+.section-heading p {
+  margin-top: 10px;
+  color: #7a6368;
+  font-size: 15px;
+}
+
+.discount-strip {
+  max-width: 850px;
+  margin: 0 auto 35px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-align: center;
+  background: linear-gradient(90deg, #a51d3d, #c9345a);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* PRODUCT GRID (CLEAN CARDS WITHOUT BUTTONS) */
+.collection-grid {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  overflow: hidden;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(70, 37, 43, 0.06);
+  border: 1px solid #faece3;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(70, 37, 43, 0.12);
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #fbf5f2;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.product-card:hover img {
+  transform: scale(1.06);
+}
+
+.product-info {
+  padding: 18px 16px;
+  text-align: center;
+}
+
+.product-info span {
+  display: block;
+  margin-bottom: 6px;
+  color: #b87b24;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.product-info h3 {
+  color: #38232a;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* LOAD MORE */
+.load-more-btn {
+  display: block;
+  margin: 40px auto 0;
+  padding: 14px 34px;
+  border: none;
+  border-radius: 30px;
+  background: #a51d3d;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(165, 29, 61, 0.2);
+  transition: 0.3s;
+}
+
+.load-more-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ABOUT */
+.about-section {
+  padding: 90px 8%;
+  text-align: center;
+  background: linear-gradient(135deg, #fff2e3, #fff6f8);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-content h2 {
+  margin: 15px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  color: #63152a;
+}
+
+.about-content p {
+  color: #725d61;
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+.about-points {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.about-points span {
+  padding: 10px 18px;
+  border-radius: 25px;
+  background: white;
+  color: #9b273e;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+/* CONTACT */
+.contact-section {
+  padding: 90px 8%;
+  background: #fffbf8;
+}
+
+.contact-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.contact-card {
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(70, 37, 43, 0.05);
+  border: 1px solid #faebe1;
+}
+
+.contact-icon {
+  font-size: 38px;
+}
+
+.contact-card h3 {
+  margin-top: 12px;
+  color: #401d24;
+}
+
+.contact-card p {
+  margin-top: 10px;
+  color: #75646a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.contact-buttons {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.whatsapp-btn, .location-btn {
+  padding: 14px 28px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.whatsapp-btn { background: #25d366; }
+.location-btn { background: #a51d3d; }
+
+/* FOOTER */
+footer {
+  padding: 50px 20px;
+  background: #40131f;
+  color: white;
+  text-align: center;
+}
+
+.footer-name {
+  font-family: "Great Vibes", cursive;
+  font-size: 48px;
+  color: #ffd888;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.footer-address {
+  max-width: 700px;
+  margin: 10px auto 0;
+  line-height: 1.8;
+}
+
+/* FLOATING WHATSAPP */
+.floating-whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 999;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #25d366;
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* RESPONSIVE */
+@media (max-width: 950px) {
+  .navbar {
+    min-height: 85px;
+  }
+  .logo-yogita {
+    font-size: 46px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .categories-container,
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar { min-height: 75px; }
+  .logo-yogita { font-size: 40px; }
+  .logo-store { font-size: 11px; letter-spacing: 3px; }
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  }
+  .nav-links.active { display: flex; }
+  .menu-btn { display: block; }
+  .hero { padding: 50px 6%; }
+  .features-grid,
+  .categories-container,
+  .collection-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn { width: 100%; text-align: center; }
+  .whatsapp-btn, .location-btn { width: 100%; text-align: center; }
+}
